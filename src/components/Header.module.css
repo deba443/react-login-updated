@@ -1,0 +1,19 @@
+header {
+  text-align: center;
+  margin: 2rem 0;
+}
+.image {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.textStyling {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 1rem 0;
+  letter-spacing: 0.2rem;
+  color: #2f4444;
+  text-transform: capitalize;
+}
