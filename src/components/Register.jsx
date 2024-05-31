@@ -1,8 +1,9 @@
+import style from "./Register.module.css"
 const Register=()=>{
     return(
-        <div>
+        <form>
             <h1>Welcome</h1>
-        </div>
+        </form>
     )
 }
 export default Register

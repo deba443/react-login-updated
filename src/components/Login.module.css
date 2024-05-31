@@ -9,7 +9,7 @@
 }
 form h2 {
   color: azure;
-  font-size:x-large;
+  font-size: x-large;
 }
 .control .noMargin {
   margin-bottom: 0;
@@ -45,21 +45,33 @@ form h2 {
   justify-content: flex-start;
   gap: 1rem;
 }
-.formActions{
-    display: flex;
-    justify-content: flex-end;
-    gap: 1rem;
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
 }
-.button{
-    cursor: pointer;
-    font-size: medium;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    border: none;
-    background-color: #147b73;
-    color: #d9e2f1;
+.button {
+  cursor: pointer;
+  font-size: medium;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #147b73;
+  color: #d9e2f1;
 }
-.resetButton{
-    background-color: transparent;
-    color: #9cbaba;
+.resetButton {
+  background-color: transparent;
+  color: #9cbaba;
+}
+.signUpButton{
+  background-color:transparent; 
+  color: #d9e2f1;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.bottomForm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

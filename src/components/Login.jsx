@@ -9,6 +9,7 @@ export default function Login() {
       email:"",
       password:""
     })
+    const [isResgisterModalOpen,setIsRegisterModalOpen]=useState(false)
     const handleInputData=(e)=>{
       setError(prev=>({
         ...prev,
@@ -48,7 +49,7 @@ export default function Login() {
       }
     }
     const resetButton=(e)=>{
-      e.preventDefault()
+      // e.preventDefault()
       setUserData({email:"",password:""})
       return
     }
@@ -59,6 +60,9 @@ export default function Login() {
     const passwordValidate=(password)=>{
       const passwordRegex = /^\S{5,}$/;
       return passwordRegex.test(password)
+    }
+    const handleSignUp=()=>{
+      setIsRegisterModalOpen(true)
     }
   return (
     <form className={style.form} onSubmit={handleLogin}>
@@ -77,12 +81,14 @@ export default function Login() {
           <p style={{color:"red",lineHeight:0}}>{error?.password}</p>
         </div>
       </div>
-      <div></div>
-
+      <div className={style.bottomForm}>
+        <button className={`${style.button} ${style.signUpButton}`} type="button" onClick={handleSignUp}>Signup</button>
       <p className={style.formActions}>
         <button className={`${style.button} ${style.resetButton}`} onClick={resetButton} type="button">Reset</button>
         <button className={style.button} >Login</button>
       </p>
+      </div>
     </form>
   );
 }
+ 
