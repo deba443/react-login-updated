@@ -1,6 +1,7 @@
 import style from "./Login.module.css"
 import { useState,useEffect} from "react";
-export default function Login() {
+export default function Login(props) {
+  const {setShow}=props
     const [userData,setUserData]=useState({
         email:"",
         password:""
@@ -9,7 +10,6 @@ export default function Login() {
       email:"",
       password:""
     })
-    const [isResgisterModalOpen,setIsRegisterModalOpen]=useState(false)
     const handleInputData=(e)=>{
       setError(prev=>({
         ...prev,
@@ -23,8 +23,10 @@ export default function Login() {
     }
     const handleLogin=(e)=>{
       e.preventDefault()
+      console.log("trying to login")
       if (validateEmail(userData?.email)){
         if (passwordValidate(userData?.password)){
+          console.log("Login successful");
           setUserData(prev=>({
             ...prev,
             email:"",
@@ -49,7 +51,6 @@ export default function Login() {
       }
     }
     const resetButton=(e)=>{
-      // e.preventDefault()
       setUserData({email:"",password:""})
       return
     }
@@ -61,8 +62,8 @@ export default function Login() {
       const passwordRegex = /^\S{5,}$/;
       return passwordRegex.test(password)
     }
-    const handleSignUp=()=>{
-      setIsRegisterModalOpen(true)
+    const handleSignUp=(e)=>{
+      setShow(true)
     }
   return (
     <form className={style.form} onSubmit={handleLogin}>
