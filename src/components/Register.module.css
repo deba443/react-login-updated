@@ -56,3 +56,11 @@
 .upperFont{
   color: #9bafaf;;
 }
+label{
+  display: block;
+  text-transform: uppercase;
+}
+.passwordContainer{
+  display: flex;
+  gap: 1rem;
+}
